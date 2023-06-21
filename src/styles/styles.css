@@ -80,8 +80,9 @@ body{
 .todo-item button{
     width: 30px;
     height: 30px;
-    background-color: #f5a302;
-    border-style: none;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #f5a302;
     border-radius: 1rem;
     cursor: pointer;
     transition: 0.2s linear;
