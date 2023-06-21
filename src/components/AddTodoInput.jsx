@@ -3,7 +3,7 @@ import React from 'react'
 export const AddTodoInput = ({addTodo, setTodoContent, todoContent}) => {
   
   const handleKeyDown = (e) =>{
-    if(e.key === 'Enter'){
+    if(e.key === 'Enter' && todoContent !== ''){
       addTodo();
     }
   }  
