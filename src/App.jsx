@@ -16,7 +16,7 @@ function App() {
 
   const addTodo = () =>{
     const todo = {
-        id: todos.length+1,
+        id: todos.length === 0 ? 1 : todos[todos.length-1].id+1,
         content: todoContent,
         finished: false
     };
