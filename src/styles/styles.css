@@ -4,7 +4,73 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body{
-    background-color: rgb(28, 25, 32);
+    background-color: #1E2328;
     color: white;
+    height: 100%;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 500px;
+}
+
+.todo-list{
+    background-color: #3B3F46;
+    height: fit-content;
+    width: 85%;
+    max-width: 700px;
+    border-radius: 1rem;
+    padding-block: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.todo-item{
+    background-color: #2A2E34;
+    border-radius: 1rem;
+    width: 85%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: Raleway;
+    font-size: 1rem;
+}
+
+.todo-item button{
+    width: 20px;
+}
+
+.add-button{
+    background-color: #f5a302;
+    border-style: none;
+    border-radius: 1rem;
+    width: 80px;
+    height: 40px;
+    font-family: Raleway;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: linear 0.1s;
+}
+
+.add-button:hover{
+    background-color: #c8ff03;
+}
+
+.add-todo-container{
+    display: flex;
+    gap: 1rem;
 }
