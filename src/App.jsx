@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { TodoList } from './components/TodoList'
+import { Clock } from './components/Clock';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div className='wrapper'>
+      <Clock/>
       <TodoList todos={todos} toggleTodo={toggleTodo}/>
       <div className="add-todo-container">
         <input onChange={(e) => setTodoContent(e.target.value)} value={todoContent} type="text" />
