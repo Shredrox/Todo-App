@@ -40,10 +40,16 @@ function App() {
       localStorage.setItem("todos", JSON.stringify(updatedTodos));
   }
 
+  const deleteTodo = (id) =>{
+    const updatedTodos = todos.filter((todo) => todo.id !== id)
+    setTodos(updatedTodos);
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+  }
+
   return (
     <div className='wrapper'>
       <Clock/>
-      <TodoList todos={todos} toggleTodo={toggleTodo}/>
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
       <AddTodoInput addTodo={addTodo} setTodoContent={setTodoContent} todoContent={todoContent}/>
     </div>
   )
