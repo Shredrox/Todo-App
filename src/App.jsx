@@ -35,8 +35,8 @@ function App() {
           return todo;
       })
 
-      console.log(updatedTodos);
       setTodos(updatedTodos);
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
   }
 
   return (
