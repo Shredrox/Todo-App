@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background: linear-gradient(43deg, rgb(22, 19, 19) 0%, rgb(30, 32, 34) 100%); 
+    background: url('../assets/layered-peaks-bg.svg'); 
     color: white;
     height: 100%;
 }
@@ -40,6 +40,9 @@ body{
     height: fit-content;
     width: 85%;
     max-width: 700px;
+    max-height: 550px;
+    overflow-y: scroll;
+    overflow: auto;
     border-radius: 1rem;
     padding-block: 1rem;
     display: flex;
@@ -180,6 +183,7 @@ body{
     background-color: #2A2E34;
     padding: 1rem;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .add-todo-container input{
