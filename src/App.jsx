@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { TodoList } from './components/TodoList'
 import { Clock } from './components/Clock';
+import { AddTodoInput } from './components/AddTodoInput';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -43,10 +44,7 @@ function App() {
     <div className='wrapper'>
       <Clock/>
       <TodoList todos={todos} toggleTodo={toggleTodo}/>
-      <div className="add-todo-container">
-        <input onChange={(e) => setTodoContent(e.target.value)} value={todoContent} type="text" />
-        <button onClick={addTodo} className='add-button'>Add Todo</button>
-      </div>
+      <AddTodoInput addTodo={addTodo} setTodoContent={setTodoContent} todoContent={todoContent}/>
     </div>
   )
 }
