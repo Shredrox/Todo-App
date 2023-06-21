@@ -43,6 +43,8 @@ body{
     max-height: 550px;
     overflow-y: scroll;
     overflow: auto;
+    scrollbar-color: #c8ff03 #2a2e34;
+    scrollbar-width: thin;
     border-radius: 1rem;
     padding-block: 1rem;
     display: flex;
