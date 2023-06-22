@@ -29,15 +29,15 @@ function App() {
   }
 
   const toggleTodo = (id) =>{
-      const updatedTodos = todos.map((todo) =>{
-          if(todo.id === id){
-              return {...todo, finished: !todo.finished};
-          }
-          return todo;
-      })
+    const updatedTodos = todos.map((todo) =>{
+      if(todo.id === id){
+        return {...todo, finished: !todo.finished};
+      }
+      return todo;
+    });
 
-      setTodos(updatedTodos);
-      localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    setTodos(updatedTodos);
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
   }
 
   const deleteTodo = (id) =>{
@@ -46,10 +46,22 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(updatedTodos));
   }
 
+  const editTodo = (id, newContent) =>{
+    const updatedTodos = todos.map((todo) =>{
+      if(todo.id === id){
+        return {...todo, content: newContent};
+      }
+      return todo;
+    });
+
+    setTodos(updatedTodos);
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+  }
+
   return (
     <div className='wrapper'>
       <Clock/>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo}/>
       <AddTodoInput addTodo={addTodo} setTodoContent={setTodoContent} todoContent={todoContent}/>
     </div>
   )

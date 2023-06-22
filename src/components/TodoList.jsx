@@ -1,7 +1,7 @@
 import React from 'react'
 import { TodoItem } from './TodoItem'
 
-export const TodoList = ({todos, toggleTodo, deleteTodo}) => {
+export const TodoList = ({todos, toggleTodo, deleteTodo, editTodo}) => {
     
     return (
       <div className='todo-list'>
@@ -10,7 +10,7 @@ export const TodoList = ({todos, toggleTodo, deleteTodo}) => {
         "No todos added." 
         :
         todos.map((todo) =>
-          <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+          <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo}/>
         )
         }
       </div>
