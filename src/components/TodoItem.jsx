@@ -15,8 +15,13 @@ export const TodoItem = ({todo, toggleTodo, deleteTodo, editTodo}) => {
 
   const adjustTextareaHeight = () => {
     if (textareaRef.current) {
-      textareaRef.current.style.height = '';
-      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+      if(textareaRef.current.scrollHeight <= 38){
+        textareaRef.current.style.height = `20px`;
+      }
+      else{
+        textareaRef.current.style.height = '';
+        textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+      }
     }
   };
 
