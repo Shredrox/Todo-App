@@ -1,5 +1,6 @@
 import React from 'react'
 import { RiDeleteBin5Fill } from 'react-icons/ri'
+import { BiEdit } from 'react-icons/bi'
 
 export const TodoItem = ({todo, toggleTodo, deleteTodo}) => { 
 
@@ -9,6 +10,7 @@ export const TodoItem = ({todo, toggleTodo, deleteTodo}) => {
         <div className='button-container'>
           <button onClick={() => toggleTodo(todo.id)} >{todo.finished ? '✓' : ''} </button>
           <RiDeleteBin5Fill onClick={() => deleteTodo(todo.id)} className='bin-button'> </RiDeleteBin5Fill>
+          <BiEdit className='edit-button'/>
         </div>
     </div>
   )
