@@ -65,20 +65,22 @@ export const TodoItem = ({todo, toggleTodo, deleteTodo, editTodo}) => {
 
   return (
     <div className={todo.finished ? 'todo-item-completed' : 'todo-item'}>
-        <textarea 
-          className={todo.finished ? 'todo-text-completed' : 'todo-text'}
-          readOnly={!editOn}
-          disabled={!editOn}
-          ref={textareaRef}
-          onChange={(e) => {setContent(e.target.value); adjustTextareaHeight();}} 
-          onKeyDown={handleKeyDown}
-          value={content}>
-        </textarea>
-        <div className='button-container'>
-          <button onClick={() => {toggleTodo(todo.id); toggleFinished();}} >{todo.finished ? '✓' : ''} </button>
-          <RiDeleteBin5Fill onClick={() => deleteTodo(todo.id)} className='bin-button'> </RiDeleteBin5Fill>
-          <BiEdit onClick={() => {setEditOn(!editOn); toggleClass(!editOn);}} className='edit-button'/>
-        </div>
+      <div className="toggle-button-container">
+        <button onClick={() => {toggleTodo(todo.id); toggleFinished();}} >{todo.finished ? '✓' : ''} </button>
+      </div>
+      <textarea 
+        className={todo.finished ? 'todo-text-completed' : 'todo-text'}
+        readOnly={!editOn}
+        disabled={!editOn}
+        ref={textareaRef}
+        onChange={(e) => {setContent(e.target.value); adjustTextareaHeight();}} 
+        onKeyDown={handleKeyDown}
+        value={content}>
+      </textarea>
+      <div className='button-container'>
+        <RiDeleteBin5Fill onClick={() => deleteTodo(todo.id)} className='bin-button'> </RiDeleteBin5Fill>
+        <BiEdit onClick={() => {setEditOn(!editOn); toggleClass(!editOn);}} className='edit-button'/>
+      </div>
     </div>
   )
 }
