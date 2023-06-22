@@ -73,8 +73,9 @@ body{
 }
 
 .todo-item label{
-    width: 85%;
+    width: 75%;
     word-wrap: break-word;
+    resize: none;
 }
 
 .todo-item button{
@@ -113,7 +114,7 @@ body{
     color: black;
     text-decoration: line-through;
     text-decoration-color: white;
-    width: 85%;
+    width: 75%;
     word-wrap: break-word;
 }
 
@@ -153,6 +154,28 @@ body{
     border-radius: 0.7rem;
     transition: 0.1s linear;
     background-color: #a70000;
+    color: white;
+}
+
+.edit-button{
+    width: 30px;
+    height: 30px;
+    background-color: #bac499;
+    color: black;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.1s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-button:hover{
+    border-radius: 0.7rem;
+    transition: 0.1s linear;
+    background-color: #a5ec21;
     color: white;
 }
 
